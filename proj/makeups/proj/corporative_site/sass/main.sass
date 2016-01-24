@@ -1,0 +1,434 @@
+@import "bourbon/bourbon"
+@import "reset"
+
++font-face("PassionOneRegular", "../fonts/PassionOne/PassionOne-Regular", $file-formats: eot woff ttf)
++font-face("OpenSansExtrabold", "../fonts/OpenSans/OpenSans-Extrabold", $file-formats: eot woff ttf)
++font-face("MyriadProRegular", "../fonts/MyriadPro/MyriadPro-Regular", $file-formats: eot woff ttf)
+
+@mixin from_sm_to_md
+	@media only screen and (min-width: 300px) and (max-width: 991px)
+		@content
+@mixin from_xs_to_md
+	@media only screen and (min-width: 300px) and (max-width: 660px)
+		@content
+
+$h1_fs: 71px;
+$h2_fs: 52px;
+$h3_fs: 36px;
+$h4_fs: 14px;
+$h5_fs: 11px;
+$article_fs: 12px;
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+body
+	font-family: "MyriadProRegular", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 300px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialised
+	background: url(../img/bg.png) repeat-x top
+header
+	text-align: center
+	.shadow 
+		box-shadow: 0 0 200px -80px black
+		height: 500px
+		margin-bottom: 200px
+a:hover 
+	color: #6a4c31
+.logo 
+	display: inline-block
+	margin-top: 30px
+	margin-bottom: 15px
+	font-family: "PassionOneRegular"
+	letter-spacing: 6px
+	text-transform: uppercase
+	.big
+		display: block
+		font-size: $h1_fs
+		color: white
+		text-shadow: 2px 4px 2px rgba(0, 0, 0, .1)
+		line-height: 42px
+		&:hover
+			text-decoration: none
+	.small 
+		text-decoration: underline
+		color: #b5d1cf
+		font-size: 18px
+	&:after, &:before
+		content: ""
+		position: relative
+		display: block
+		height: 2px
+		width: 100px
+		background-color: #b5d1cf
+	&:after
+		left: -120px
+		top: -40px
+	&:before
+		left: 248px
+		top: 31px
+nav 
+	font-size: $h4_fs
+	text-transform: uppercase
+	.line 
+		width: 100%
+		position: relative
+		height: 2px
+		background-color: #357894
+		bottom: 0
+		left: 0
+	ul 
+		list-style: none
+		background-color: #e3fbfa
+		height: 55px
+		li 
+			height: 65px
+			display: inline-block
+			font-family: "Trebuchet MS"
+			border-right: 1px solid #c2dcdb
+			margin-left: -3px
+			&:last-child
+				border: none
+			a 
+				@include from_sm_to_md 
+					padding: 20px 10px
+					font-size: 11px
+				position: relative
+				margin-left: -1px
+				display: block
+				height: 65px
+				color: #86a5a3
+				padding: 20px 45px
+				z-index: 3
+				&:hover,
+				&.active
+					text-decoration: none
+					background-color: #839e9c
+					color: white
+					&:after 
+						right: -1px
+						top: 0px
+						position: absolute
+						content: ""
+						display: block
+						height: 65px
+						width: 1px
+						background-color: #839e9c
+.carousel_wrapper
+	height: 620px
+	padding-top: 10px
+	background-color: #e3fbfa
+#my_carousel
+	.carousel-caption
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 500px
+		background-size: cover
+	.item 
+		&:nth-child(1)
+			.carousel-caption
+				background-image: url(../img/slider_1.png)
+		&:nth-child(2)
+			.carousel-caption
+				background-image: url(../img/slider_2.png)
+		&:nth-child(3)
+			.carousel-caption
+				background-image: url(../img/slider_3.png)
+	.carousel-inner,
+	.carousel-control,
+	.item
+		height: 620px
+	.line 
+		position: absolute
+		width: 100%
+		height: 2px
+		background-color: #d2d9d8
+		z-index: 1
+		top: 597px
+	ol 
+		top: 585px
+		width: 150px
+		margin-right: auto
+		margin-left: -65px
+		z-index: 2
+		background-color: #fff
+		li 
+			background-color: #839e9c
+			width: 25px
+			height: 25px
+			border-radius: 25px
+			border: none
+			margin: 0
+			&.active 
+				background-color: #6a4c31	
+				border: none
+	.text 
+		position: absolute
+		top: 500px
+		width: 100%
+		height: 100%
+		left: 0px
+		background-color: #FFF
+		p 
+			@include from_xs_to_md
+				font-size: 15px
+				line-height: 24px
+			margin-top: 15px
+			display: inline-block
+			width: 100%
+			text-transform: uppercase
+			line-height: 30px
+			font-size: 26px
+			font-family: "OpenSansExtrabold"
+			color: #839e9c
+.articles 
+	margin-top: 40px
+	.col-md-6
+		article
+			font-family: "Arial"
+			p 
+				font-size: $article_fs
+				color: #b4b4b4
+				margin-top: 10px
+				span 
+					font-weight: bold
+		&:first-child
+			article 
+				@include from_sm_to_md 
+					margin: 0
+				text-align: right
+				margin-right: 25px
+		&:last-child
+			article 
+				@include from_sm_to_md 
+					margin: 0
+				margin-left: 50px
+				text-align: left
+		.brown_header
+			@include from_xs_to_md
+				line-height: 35px
+.read_more 
+	@include from_sm_to_md 
+		line-height: 25px
+	text-transform: uppercase
+	text-decoration: underline
+	color: #85a09d
+	font-size: $h5_fs
+	font-weight: bold
+	line-height: 50px
+.brown_header 
+	font-size: $h3_fs 
+	color: #6a4c31
+	font-family: "PassionOneRegular"
+.main_profile
+	text-align: center
+	margin-top: 35px
+	&:after 
+		display: block
+		content: ""
+		width: 100%
+		height: 2px
+		background-color: #d2d9d8
+		margin-top: 5px
+	h3
+		@include from_xs_to_md
+			width: 300px
+		margin: 0 auto
+		width: 423px
+		text-transform: uppercase
+		font-family: "PassionOneRegular"
+		font-size: $h3_fs
+		color: #85a09d
+		border-top: 2px solid #d2d9d8
+		border-bottom: 2px solid #d2d9d8
+		line-height: 40px
+		padding-top: 5px
+		&:after 
+			content: ""
+			height: 1px
+			width: 260px
+			background-color: #d2d9d8
+			display: block
+			position: relative
+			top: 15px
+			margin: 0 auto
+	.row 
+		font-family: "Arial"
+		margin-top: 40px
+		.col-md-2 
+			text-align: left
+			@include from_sm_to_md 
+				margin: 40px 0
+			h4 
+				@include from_sm_to_md 
+					font-size: 25px
+					margin: 0
+				font-size: $h4_fs
+				color: #6a4c31
+				margin: 10px 0
+				font-weight: bold
+			p 
+				font-size: 12px
+				color: #b4b4b4
+			.pic 
+				@include from_sm_to_md 
+					height: 475px
+				height: 120px
+				border: 1px solid lightgray
+			&:nth-child(1)
+				.pic
+					background-size: cover
+					background-image: url(../img/client_1.png)			
+			&:nth-child(2)
+				.pic
+					background-size: cover
+					background-image: url(../img/client_2.png)
+			&:nth-child(3)
+				.pic
+					background-size: cover
+					background-image: url(../img/client_3.png)
+			&:nth-child(4)
+				.pic
+					background-size: cover
+					background-image: url(../img/client_4.png)
+			&:nth-child(5)
+				.pic
+					background-size: cover
+					background-image: url(../img/client_5.png)
+			&:nth-child(6)
+				.pic 
+					background-size: cover
+					background-image: url(../img/client_6.png)
+.footer_menu 
+	margin-top: 30px
+	&:after 
+		display: block
+		content: ""
+		width: 100%
+		height: 2px
+		background-color: #d2d9d8
+		margin-top: 20px
+	ul 
+		list-style-image: url(../img/arrow.png)
+		li 
+			@include from_xs_to_md
+				margin: 10px 5px
+				line-height: 15px
+		a 
+			@include from_xs_to_md
+				font-size: 11px
+			text-transform: uppercase
+			font-family: "Arial"
+			font-size: 12px
+			color: #85a09d
+			&:hover
+				color: #6a4c31
+	.cyan_header 
+		font-family: "PassionOneRegular"
+		font-size: $h3_fs
+		color: #85a09d
+		line-height: 40px
+		padding-top: 5px
+	.quote 
+		background-color: #e5e9e8
+		padding: 13px
+		p 
+			color: #6a4c31
+			font-family: "Arial"
+			font-weight: bold
+			font-size: 12px
+			&:before 
+				content: ""
+				display: block
+				width: 15px
+				height: 15px
+				background-image: url(../img/arrow_2.png)
+				float: left
+				margin-right: 9px
+			&:after 
+				content: ""
+				display: inline-block
+				width: 15px
+				height: 15px
+				background-image: url(../img/arrow_2.png)
+				background-position: 15px 0
+				margin-left: 9px
+	.autor 
+		float: right
+		color: #85a09d
+		font-family: "Arial"
+		font-weight: bold
+		font-size: 14px	
+		line-height: 15px
+		margin-top: 5px
+		font-style: italic
+		&:before 
+			content: ""
+			position: relative
+			top: -5px
+			right: 10px
+			float: left
+			display: block
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 25px 25px 0
+			border-color: transparent #e5e9e8 transparent transparent
+		span 
+			font-size: 12px	
+	.col-md-3
+		@include from_sm_to_md 
+			margin: 20px 0
+	.brown_header
+		@include from_xs_to_md
+			font-size: 25px
+footer 
+	height: 100px
+	text-align: center
+	p:first-child
+		margin-top: 10px
+		display: block
+		font-size: 24px
+		color: #b4b4b4
+		font-family: "PassionOneRegular"
+		letter-spacing: 3px
+		span 
+			font-size: 12px
+			font-family: "Arial"
+			letter-spacing: normal
+		&:hover
+			text-decoration: none
+	p:last-child
+		margin-top: -5px
+		color: #b4b4b4
+		font-size: 12px
+		font-family: "Arial"
+		a 
+			color: #a6b9b7
+			text-decoration: underline

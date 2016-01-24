@@ -1,0 +1,15 @@
+@font-face {
+	font-family: "Monaco";
+	src: url("../fonts/Monaco/Monaco.eot");
+	src: url("../fonts/Monaco/Monaco.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/Monaco/Monaco.woff") format("woff"),
+			 url("../fonts/Monaco/Monaco.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+*
+{
+	font-family: Monaco, sans-serif;
+	padding: 0px;
+	margin: 0px;
+}

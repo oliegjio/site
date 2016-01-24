@@ -1,0 +1,162 @@
+@font-face {
+	font-family: "Monaco";
+	src: url("../fonts/Monaco/Monaco.eot");
+	src: url("../fonts/Monaco/Monaco.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/Monaco/Monaco.woff") format("woff"),
+			 url("../fonts/Monaco/Monaco.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+*
+{
+	font-family: Monaco, sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+a
+{
+	color: black;
+}
+.menu
+{
+	margin: 100px;
+	font-size: 40px;
+}
+.indent15
+{
+	padding: 15px 0px 15px 0px;
+}
+.balls
+{
+	font-size: 40px;
+	padding: 5px;
+	color: orange;
+	border: 2px dashed red;
+}
+.balls:hover
+{
+	color: darkgreen;
+}
+.breaker
+{
+	font-size: 25px;
+	color: grey;
+	text-decoration: none;
+}
+.breaker:hover
+{
+	color: grey;
+	text-decoration: none;
+}
+.rpg
+{
+	font-size: 20px;
+	color: grey;
+	text-decoration: line-through underline overline;
+}
+.rpg:hover
+{
+	text-decoration: line-through underline overline;
+	color: grey;
+}
+.chess
+{
+	padding: 0px 5px 5px 5px;
+	font-size: 50px;
+	color: red;
+	border: 3px solid orange;
+}
+.chess:hover
+{
+	color: crimson;
+}
+.makeups 
+{
+	text-decoration: none;
+	padding: 2px 10px;
+	border: 6px dotted lime;
+}
+.makeups span:nth-child(1)
+{
+	color: red;
+}
+.makeups span:nth-child(2)
+{
+	color: green;
+}
+.makeups span:nth-child(3)
+{
+	color: blue;
+}
+.makeups span:nth-child(4)
+{
+	color: orangered;
+}
+.makeups span:nth-child(5)
+{
+	color: orange;
+}
+.makeups span:nth-child(5)
+{
+	color: forestgreen;
+}
+.makeups span:nth-child(6)
+{
+	color: magenta;
+}
+.makeups span:nth-child(7)
+{
+	color: lightsalmon;
+}
+.makeups span:nth-child(8)
+{
+	color: lightblue;
+}
+.makeups span:nth-child(9)
+{
+	color: crimson;
+}
+.makeups span:nth-child(10)
+{
+	color: silver;
+}
+.makeups span:nth-child(11)
+{
+	color: gold;
+}
+.makeups span:nth-child(12)
+{
+	color: saddlebrown;
+}
+.makeups span:nth-child(13)
+{
+	color: lightgreen;
+}
+.makeups span:nth-child(14)
+{
+	color: bisque;
+}
+.makeups span:nth-child(15)
+{
+	color: red;
+}
+.makeups span:nth-child(16)
+{
+	color: cornflowerblue;
+}
+.makeups span:nth-child(17)
+{
+	color: turquoise;
+}
+.makeups span:nth-child(18)
+{
+	color: orange;
+}
+.makeups span:nth-child(19)
+{
+	color: olive;
+}
+.makeups span:nth-child(20)
+{
+	color: pink;
+}
