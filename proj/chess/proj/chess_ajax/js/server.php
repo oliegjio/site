@@ -2,17 +2,10 @@
 
 session_start();
 
-DEFINE ("DB_USER", "u205086875_main");
-DEFINE ("DB_PASSWORD", "eH9oiD53E8");
+DEFINE ("DB_USER", "u680548322_main");
+DEFINE ("DB_PASSWORD", "xpzZ=]^Rwlk+I=`m>6");
 DEFINE ("DB_HOST", "mysql.hostinger.ru");
-DEFINE ("DB_NAME", "u205086875_main");
-
-/*
-DEFINE ("DB_USER", "u205086875_main");
-DEFINE ("DB_PASSWORD", "eH9oiD53E8");
-DEFINE ("DB_HOST", "mysql.hostinger.ru");
-DEFINE ("DB_NAME", "u205086875_main");
-*/
+DEFINE ("DB_NAME", "u680548322_main");
 
 $req_type = json_decode($_POST["type"], true);
 $req_mess = json_decode($_POST["message"], true);
