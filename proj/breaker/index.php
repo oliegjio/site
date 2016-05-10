@@ -9,8 +9,8 @@
     <title>Breaker</title>
   </head>
   <body>
+    <a href="../../index.html" style="position: fixed; right: 0px; background: orange; font-size: 30px; font-family: georgia; text-align: center; width: 42px; height: 42px; display: block; top: 0px">H</a>
     <script src="js/main.js"></script>
     <canvas id="canvas" width="800" height="800"></canvas>
-    <a href="../../index.html" style="position: fixed; right: 0px; background: orange; font-size: 30px; font-family: georgia; text-align: center; width: 42px; height: 42px; display: block; top: 0px">H</a>
   </body>
 </html>

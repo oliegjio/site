@@ -9,6 +9,7 @@
     <title>Chess</title>
   </head>
   <body>
+    <a href="../../index.php" style="position: fixed; right: 0px; background: orange; font-size: 30px; font-family: georgia; text-align: center; width: 42px; height: 42px; display: block; top: 0px">H</a>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/main.js"></script>
     <table cellspacing="0" cellpadding="0" class="table">
@@ -51,6 +52,5 @@
         </td>
       </tr>
     </table>
-    <a href="../../index.php" style="position: fixed; right: 0px; background: orange; font-size: 30px; font-family: georgia; text-align: center; width: 42px; height: 42px; display: block; top: 0px">H</a>
   </body>
 </html>

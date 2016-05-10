@@ -9,10 +9,10 @@
     <title>HAH</title>
   </head>
   <body>
+    <a href="../../index.html" style="position: fixed; right: 0px; background: orange; font-size: 30px; font-family: georgia; text-align: center; width: 42px; height: 42px; display: block; top: 0px">H</a>
     <ul class="menu">
       <li class="indent"><a href="proj/chess_ajax/index.php" class="chess">Шахмать</a>&nbsp&nbsp&nbsp<span class="chess_ajax">(AJAX)</span></li>
       <li class="indent"><a href="proj/chess_websocket/index.php" class="chess">Шахматъ</a>&nbsp&nbsp&nbsp<span class="chess_websocket">(Websocket)</span></li>
     </ul>
-    <a href="../../index.html" style="position: fixed; right: 0px; background: orange; font-size: 30px; font-family: georgia; text-align: center; width: 42px; height: 42px; display: block; top: 0px">H</a>
   </body>
 </html>
