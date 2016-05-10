@@ -37,17 +37,6 @@ a
 {
 	color: darkgreen;
 }
-.breaker
-{
-	font-size: 25px;
-	color: grey;
-	text-decoration: none;
-}
-.breaker:hover
-{
-	color: grey;
-	text-decoration: none;
-}
 .chess
 {
 	padding: 0px 5px 5px 5px;
