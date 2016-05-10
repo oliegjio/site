@@ -1,9 +1,9 @@
-@import "bourbon/bourbon"
+@import "../../../libs/bourbon/bourbon"
 @import "reset"
 
-+font-face("PassionOneRegular", "../fonts/PassionOne/PassionOne-Regular", $file-formats: eot woff ttf)
-+font-face("OpenSansExtrabold", "../fonts/OpenSans/OpenSans-Extrabold", $file-formats: eot woff ttf)
-+font-face("MyriadProRegular", "../fonts/MyriadPro/MyriadPro-Regular", $file-formats: eot woff ttf)
++font-face("PassionOneRegular", "../../../fonts/PassionOne/PassionOne-Regular", $file-formats: eot woff ttf)
++font-face("OpenSansExtrabold", "../../../fonts/OpenSans/OpenSans-Extrabold", $file-formats: eot woff ttf)
++font-face("MyriadProRegular", "../../../fonts/MyriadPro/MyriadPro-Regular", $file-formats: eot woff ttf)
 
 @mixin from_sm_to_md
 	@media only screen and (min-width: 300px) and (max-width: 991px)
@@ -12,12 +12,12 @@
 	@media only screen and (min-width: 300px) and (max-width: 660px)
 		@content
 
-$h1_fs: 71px;
-$h2_fs: 52px;
-$h3_fs: 36px;
-$h4_fs: 14px;
-$h5_fs: 11px;
-$article_fs: 12px;
+$h1_fs: 71px
+$h2_fs: 52px
+$h3_fs: 36px
+$h4_fs: 14px
+$h5_fs: 11px
+$article_fs: 12px
 
 html.js .loader
 	background: none repeat scroll 0 0 #ffffff

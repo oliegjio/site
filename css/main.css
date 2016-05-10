@@ -48,17 +48,6 @@ a
 	color: grey;
 	text-decoration: none;
 }
-.rpg
-{
-	font-size: 20px;
-	color: grey;
-	text-decoration: line-through underline overline;
-}
-.rpg:hover
-{
-	text-decoration: line-through underline overline;
-	color: grey;
-}
 .chess
 {
 	padding: 0px 5px 5px 5px;

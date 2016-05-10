@@ -1,9 +1,9 @@
 @font-face {
 	font-family: "Monaco";
-	src: url("../fonts/Monaco/Monaco.eot");
-	src: url("../fonts/Monaco/Monaco.eot?#iefix") format("embedded-opentype"),
-			 url("../fonts/Monaco/Monaco.woff") format("woff"),
-			 url("../fonts/Monaco/Monaco.ttf") format("truetype");
+	src: url("../../../fonts/Monaco/Monaco.eot");
+	src: url("../../../fonts/Monaco/Monaco.eot?#iefix") format("embedded-opentype"),
+			 url("../../../fonts/Monaco/Monaco.woff") format("woff"),
+			 url("../../../fonts/Monaco/Monaco.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
@@ -38,7 +38,7 @@
 	padding: 0px 20px 5px 5px;
 	font-size: 50px;
 	color: orange;
-	text-decoration: line-through;
+	text-decoration: underline;
 	cursor: default;
 }
 .chess_websocket
@@ -46,6 +46,6 @@
 	padding: 0px 20px 5px 5px;
 	font-size: 60px;
 	color: red;
-	text-decoration: underline;
+	text-decoration: line-through;
 	cursor: default;
 }
