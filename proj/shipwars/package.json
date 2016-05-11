@@ -4,7 +4,7 @@
   "description": "shipwars",
   "main": "index.js",
   "scripts": {
-    "server": "npm run lite",
+    "start": "npm run lite",
     "lite": "lite-server"
   },
   "author": "oliegjio",

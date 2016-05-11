@@ -26,6 +26,11 @@ a
 {
 	padding: 15px 0px 15px 0px;
 }
+.shipwars {
+	color: lightblue;
+	border: solid 2px cyan;
+	text-decoration: none;
+}
 .balls
 {
 	font-size: 40px;
