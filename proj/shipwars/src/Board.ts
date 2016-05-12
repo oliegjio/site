@@ -1,5 +1,5 @@
-import {Ship} from './Ship';
+import {Ship} from './Ship'
 
 export class Board {
-    public sheeps: Ship[] = []; 
+    public sheeps: Ship[] = []
 }

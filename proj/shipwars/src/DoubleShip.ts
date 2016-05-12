@@ -1,5 +1,5 @@
-import {Ship} from './Ship.ts';
+import {Ship} from './Ship.ts'
 
 export class DoubleShip extends Ship {
-    public structure: boolean[] = [true, true];
+    public structure: boolean[] = [true, true]
 }

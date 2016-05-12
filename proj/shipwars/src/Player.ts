@@ -1,5 +1,5 @@
-import * as Var from './Var';
+import * as Var from './Var'
 
 export class Player {
-    public name: Var.Owner;
+    public name: Var.Owner
 }
