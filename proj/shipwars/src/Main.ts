@@ -7,34 +7,30 @@ import * as Var from './Var'
 
 class Main {
     constructor(){
-        this.canvas.createElement(
-            'test',
-            100,
-            100,
-            50,
-            50,
-            100,
-            'pink'
-        ).setOnclick(()=>{console.log('!!!')})
+       this.canvas.createElement(
+           'test',
+           100,
+           100,
+           200,
+           200,
+           30
+       ).setMouseStyle('pointer').setOnclick(()=>{console.log('lol')});
+       this.canvas.createElement(
+           'test',
+           500,
+           100,
+           300,
+           290,
+           30,
+           'green'
+       ).setMouseStyle('move').setOnclick(()=>{console.log('fuck')});
         
+        // обработка правого клика
         $(window).on('contextmenu', (event)=>{
             event.preventDefault()
-            
-            let iterator = 0
-            this.canvas.createElement(
-                'rect' + iterator,
-                event.clientX - 10,
-                event.clientY - 10,
-                20,
-                20,
-                100,
-                'green'
-            ).setOnclick(()=>{
-                console.log('!!!')
-            })
-            iterator++
         })
         
+        // обработка левого клика по элементу
         $(window).click((event)=>{
             for(let element of this.canvas.getElements()){
                 if(element.clickable){
@@ -47,6 +43,27 @@ class Main {
                     }
                 }
             }   
+        })
+        
+        // обработка движений мышью по экрану
+        $(window).mousemove((event)=>{
+            let lock: boolean
+            for(var element of this.canvas.getElements()){
+                if(lock === true) continue
+                if(element.isMouseStyle){
+                    if(
+                    event.clientX >= element.getX() &&
+                    event.clientX <= element.getX() + element.getWidth() &&
+                    event.clientY >= element.getY() &&
+                    event.clientY <= element.getY() + element.getHeight()){
+                        lock = true
+                        $('body, html').css('cursor', element.getMouseStyle())
+                    } else {
+                        lock = false
+                        $('body, html').css('cursor', 'default')
+                    }
+                }
+            }
         })
         
         requestAnimationFrame(<any>this.update.bind(this))

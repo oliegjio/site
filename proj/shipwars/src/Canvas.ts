@@ -13,9 +13,11 @@ export class Canvas {
     private elements: Array<CanvasElement> = []
     
     public getCanvas:
-    ()=> any =
-    function(){
-        return this.canvas.get(0)
+    (isReal: boolean)=> any =
+    function(isReal){
+        if(isReal){
+            return this.canvas.get(0)
+        } else {return this.canvas}
     }
     
     public getElements:

@@ -14,8 +14,27 @@ export class CanvasElement {
     }
     
     // стиль курсора при наведении на элемент
-    private mouseStyle: string
-
+    private mouseStyle: string = 'default'
+    public isMouseStyle: boolean = false
+    
+    public setMouseStyle: 
+    (style: string)=> CanvasElement =
+    function(style){
+        if(style === 'default'){
+            this.mouseStyle = style
+            this.isMouseStyle = false
+            return this
+        }
+        this.mouseStyle = style
+        this.isMouseStyle = true
+        
+        return this
+    }
+    public getMouseStyle:
+    ()=> string = 
+    function(){
+        return this.mouseStyle
+    }
     
     private parent: Canvas
     private onclick: ()=> void
@@ -27,14 +46,16 @@ export class CanvasElement {
     }
     
     public setOnclick:
-    (callback: ()=> void)=> void =
+    (callback: ()=> void)=> CanvasElement =
     function(fn){
         if(fn === null){
             this.clickable = false
-            return
+            return this
         }
         this.onclick = fn
         this.clickable = true
+        
+        return this
     }
     public getOnclick:
     ()=> ()=> void = 
@@ -43,10 +64,12 @@ export class CanvasElement {
     }
     
     public setX:
-    (x: number)=> void =
+    (x: number)=> CanvasElement =
     function(x){
         this.x = x
         this.parent.draw()
+        
+        return this
     }
     public getX: 
     ()=> number = 
@@ -55,10 +78,12 @@ export class CanvasElement {
     }
     
     public setY:
-    (y: number)=> void =
+    (y: number)=> CanvasElement =
     function(y){
         this.y = y;
         this.parent.draw()
+        
+        return this
     }
     public getY:
     ()=> number =
@@ -67,10 +92,12 @@ export class CanvasElement {
     }
     
     public setWidth:
-    (width: number)=> void =
+    (width: number)=> CanvasElement =
     function(width){
         this.width = width
         this.parent.draw()
+        
+        return this
     }
     public getWidth:
     ()=> number = 
@@ -79,10 +106,12 @@ export class CanvasElement {
     }
     
     public setHeight:
-    (height: number)=> void =
+    (height: number)=> CanvasElement =
     function(height){
         this.height = height
         this.parent.draw()
+        
+        return this
     }
     public getHeight:
     ()=> number =
@@ -91,10 +120,12 @@ export class CanvasElement {
     }
     
     public setColor:
-    (color: number | string)=> void = 
+    (color: number | string)=> CanvasElement = 
     function(color){
         this.color = color
         this.parent.draw()
+        
+        return this
     }
     public getColor:
     ()=> string | number = 
