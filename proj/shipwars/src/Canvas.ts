@@ -18,6 +18,12 @@ export class Canvas {
         return this.canvas.get(0)
     }
     
+    public getElements:
+    ()=> Array<CanvasElement> =
+    function(){
+        return this.elements
+    }
+    
     // реализация метода draw() из CanvasElementParentInterface
     public draw:
     ()=> void =

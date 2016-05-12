@@ -9,27 +9,45 @@ class Main {
     constructor(){
         this.canvas.createElement(
             'test',
-            1,
-            1,
-            5,
-            5,
+            100,
+            100,
+            50,
+            50,
             100,
             'pink'
-        )
+        ).setOnclick(()=>{console.log('!!!')})
         
-        let iterator = 0;
-        this.canvas.getCanvas().onclick = (event)=>{
+        $(window).on('contextmenu', (event)=>{
+            event.preventDefault()
+            
+            let iterator = 0
             this.canvas.createElement(
-                'ball' + iterator,
-                event.clientX - 5,
-                event.clientY - 5,
-                10,
-                10,
-                1,
-                'blue'
-            )
+                'rect' + iterator,
+                event.clientX - 10,
+                event.clientY - 10,
+                20,
+                20,
+                100,
+                'green'
+            ).setOnclick(()=>{
+                console.log('!!!')
+            })
             iterator++
-        }
+        })
+        
+        $(window).click((event)=>{
+            for(let element of this.canvas.getElements()){
+                if(element.clickable){
+                    if(
+                    event.clientX >= element.getX() &&
+                    event.clientX <= element.getX() + element.getWidth() &&
+                    event.clientY >= element.getY() &&
+                    event.clientY <= element.getY() + element.getHeight()){
+                        element.click()
+                    }
+                }
+            }   
+        })
         
         requestAnimationFrame(<any>this.update.bind(this))
     }

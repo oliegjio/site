@@ -15,8 +15,32 @@ export class CanvasElement {
     
     // стиль курсора при наведении на элемент
     private mouseStyle: string
+
     
     private parent: Canvas
+    private onclick: ()=> void
+    public clickable: boolean = false
+    public click:
+    ()=> void =
+    function(){
+        this.onclick();
+    }
+    
+    public setOnclick:
+    (callback: ()=> void)=> void =
+    function(fn){
+        if(fn === null){
+            this.clickable = false
+            return
+        }
+        this.onclick = fn
+        this.clickable = true
+    }
+    public getOnclick:
+    ()=> ()=> void = 
+    function(){
+        return this.onclick
+    }
     
     public setX:
     (x: number)=> void =
